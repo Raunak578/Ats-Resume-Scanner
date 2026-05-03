@@ -11,13 +11,6 @@ app.use(cors());
 app.use(express.json()); 
 app.use("/api/resume", resumeRoutes);
 
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log("MongoDB Connected ");
-  })
-  .catch((err) => {
-    console.log("MongoDB Connection Error:", err);
-  });
 
 app.get("/", (req, res) => {
   res.send("Welcome to ATS Resume Scanner!");

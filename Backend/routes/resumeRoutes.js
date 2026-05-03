@@ -6,6 +6,4 @@ const { advancedScore, getResumes } = require("../controllers/resumeController")
 
 router.post("/advanced-score", upload.single("resume"), advancedScore);
 
-router.get("/resumes", getResumes);
-
 module.exports = router;
